@@ -16,15 +16,13 @@ angular.module('page', ["ideUI", "ideView", "entityApi"])
 
 		//-----------------Events-------------------//
 		messageHub.onDidReceiveMessage("main.entities.Item.entitySelected", function (msg) {
-			// messageHub.onDidReceiveMessage("extension.entities.Item.entitySelected", function (msg) {
-			resetPagination();
+]			resetPagination();
 			$scope.selectedMainEntityId = msg.data.selectedMainEntityId;
 			$scope.loadPage($scope.dataPage);
 		}, true);
 
 		messageHub.onDidReceiveMessage("main.entities.Item.clearDetails", function (msg) {
-			// messageHub.onDidReceiveMessage("extension.entities.Item.clearDetails", function (msg) {
-			$scope.$apply(function () {
+]			$scope.$apply(function () {
 				resetPagination();
 				$scope.selectedMainEntityId = null;
 				$scope.data = null;
