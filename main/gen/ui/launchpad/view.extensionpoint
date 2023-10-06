@@ -1,0 +1,4 @@
+{
+    "name": "main-view",
+    "description": "main - Extension Point for the Application View Providers"
+}
