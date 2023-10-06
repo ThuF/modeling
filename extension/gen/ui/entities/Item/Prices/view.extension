@@ -1,0 +1,5 @@
+{
+    "module": "extension/gen/ui/entities/Item/Prices/view.js",
+    "extensionPoint": "main-view",
+    "description": "extension - Application View - Details"
+}

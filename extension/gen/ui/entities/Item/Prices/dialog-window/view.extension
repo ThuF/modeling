@@ -1,0 +1,5 @@
+{
+    "module": "extension/gen/ui/entities/Item/Prices/dialog-window/view.js",
+    "extensionPoint": "main-dialog-window",
+    "description": "extension - Application Dialog Window"
+}

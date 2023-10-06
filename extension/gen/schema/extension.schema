@@ -1,0 +1,63 @@
+{
+    "schema": {
+        "structures": [
+            {
+                "name": "CODBEX_ITEM",
+                "type": "TABLE",
+                "columns": [
+                    {
+                        "type": "INTEGER",
+                        "length": 0,
+                        "primaryKey": true,
+                        "identity": true,
+                        "nullable": true,
+                        "name": "ITEM_ID"
+                    },
+                    {
+                        "type": "VARCHAR",
+                        "length": 20,
+                        "nullable": true,
+                        "name": "ITEM_NAME"
+                    }
+                ]
+            },
+            {
+                "name": "CODBEX_PRICES",
+                "type": "TABLE",
+                "columns": [
+                    {
+                        "type": "INTEGER",
+                        "length": 0,
+                        "primaryKey": true,
+                        "identity": true,
+                        "nullable": true,
+                        "name": "PRICES_ID"
+                    },
+                    {
+                        "type": "INTEGER",
+                        "length": 20,
+                        "precision": "NaN",
+                        "scale": "NaN",
+                        "nullable": true,
+                        "name": "PRICES_VALUE"
+                    },
+                    {
+                        "type": "INTEGER",
+                        "length": 0,
+                        "nullable": true,
+                        "name": "PRICES_ITEMID"
+                    }
+                ]
+            },
+            {
+                "name": "Prices_Item",
+                "type": "foreignKey",
+                "table": "CODBEX_PRICES",
+                "constraintName": "Prices_Item",
+                "columns": "PRICES_ITEMID",
+                "referencedTable": "CODBEX_ITEM",
+                "referencedColumns": "ITEM_ID"
+            }
+        ]
+    }
+}
