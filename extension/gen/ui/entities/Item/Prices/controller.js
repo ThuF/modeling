@@ -15,14 +15,14 @@ angular.module('page', ["ideUI", "ideView", "entityApi"])
 		resetPagination();
 
 		//-----------------Events-------------------//
-		messageHub.onDidReceiveMessage("extension.entities.Item.entitySelected", function (msg) {
-			resetPagination();
+		messageHub.onDidReceiveMessage("main.entities.Item.entitySelected", function (msg) {
+]			resetPagination();
 			$scope.selectedMainEntityId = msg.data.selectedMainEntityId;
 			$scope.loadPage($scope.dataPage);
 		}, true);
 
-		messageHub.onDidReceiveMessage("extension.entities.Item.clearDetails", function (msg) {
-			$scope.$apply(function () {
+		messageHub.onDidReceiveMessage("main.entities.Item.clearDetails", function (msg) {
+]			$scope.$apply(function () {
 				resetPagination();
 				$scope.selectedMainEntityId = null;
 				$scope.data = null;
